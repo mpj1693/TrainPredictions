@@ -1,20 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Train-Predictions</title>
 </head>
+
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
+  <header class="jumbotron jumbotron-fluid bg-warning text-light">
+    <div class="container-fluid text-center">
+      <h1 class="display-4">Train-Predictions</h1>
+      <h5 id="current-time"></h5>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="row">
+
+      <aside class="col-12 col-md-3">
+        <div class="card">
+          <h4 class="card-header bg-warning text-light">
+            Add an train.
+          </h4>
+          <div class="card-body">
+
+            <form id="train-form">
+
+              <div class="form-group">
+                <label for="name-input">Train Name</label>
+                <input class="form-control" type="text" id="name-input" placeholder="Train Name" />
+              </div>
+
+              <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input class="form-control" type="text" id="destination-input" placeholder="Train Destination" />
+              </div>
+
+              <div class="form-group">
+                <label for="first-train-input">First Train (hh:mm Military Time)</label>
+                <input class="form-control" type="military-time" value="00:00" id="first-train-input"
+                  placeholder="First Train Time (hh:mm Military Time)" />
+              </div>
+
+              <div class="form-group">
+                <label for="train-frequency">Frequency of the Train</label>
+                <input class="form-control" type="number" id="train-frequency" placeholder="Train Frequency" />
+              </div>
+
+              <button class="btn btn-block btn-warning" type="submit">Add Train</button>
+            </form>
+
+          </div>
+        </div>
+      </aside>
+
+      <section class="col-12 col-md-9">
+
+        <div class="card">
+          <h4 class="card-header bg-warning text-light">
+            Train Data
+          </h4>
+          <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col">Train Name</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">Frequency</th>
+                      <th scope="col">First Train</th>
+                      <th scope="col">Next Arrival</th>
+                      <th scope="col">Minutes Away</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                  </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
+
 </html>
