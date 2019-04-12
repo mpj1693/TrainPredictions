@@ -10,7 +10,7 @@ In this webpage you can train name, time and frequency of the train and it will 
 
 * Javascript
 * HTML
-*JQuery
+* JQuery
 
 ### Technologies Used
 * Firebase
